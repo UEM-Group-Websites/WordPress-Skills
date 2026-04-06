@@ -13,6 +13,7 @@ These skills are designed to be installed in [Claude.ai](https://claude.ai) and 
 Create, update, and manage WordPress posts, pages, and custom post types using WP-CLI over SSH.
 
 **What it does:**
+
 - Creates and updates posts, pages, and custom post types (CPTs)
 - Uploads media via WP-CLI and injects attachment URLs into post content
 - Fetches existing content before applying changes (read → patch → verify)
@@ -21,6 +22,7 @@ Create, update, and manage WordPress posts, pages, and custom post types using W
 - Guides SSH/WP-CLI configuration if not already set up
 
 **Guardrails built in:**
+
 - Always asks for the page URL before any update
 - Never guesses the post type — asks explicitly if it can't be inferred
 - Makes the minimum requested change only — no unsolicited edits
@@ -46,6 +48,7 @@ Each skill assumes the following are in place on your local machine:
 - A `~/.wp-cli/config.yml` with a named alias for the remote server
 
 Minimal `config.yml` example:
+
 ```yaml
 @production:
   ssh: user@your-server.com
@@ -53,6 +56,7 @@ Minimal `config.yml` example:
 ```
 
 For AWS Elastic Beanstalk with a key pair:
+
 ```yaml
 @production:
   ssh: ec2-user@your-eb-hostname.amazonaws.com --ssh-keys=~/.ssh/your-key.pem
